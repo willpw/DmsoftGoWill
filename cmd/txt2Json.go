@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	dmsoft "github.com/willpw/GoDmsoftWillpwr"
+	dmsoft "github.com/willpw/DmsoftGoWill"
 )
 
 func main() {

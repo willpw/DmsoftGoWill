@@ -1,73 +1,73 @@
 package dmsoft
 
 func (com *Dmsoft) DoubleToData(value float64) string {
-	ret, _ := com.dm.CallMethod("DoubleToData", value)
+	ret, _ := com.dm.CallMethod(DllM["DoubleToData"], value)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindData(hwnd int, addrRange string, data string) string {
-	ret, _ := com.dm.CallMethod("FindData", hwnd, addrRange, data)
+	ret, _ := com.dm.CallMethod(DllM["FindData"], hwnd, addrRange, data)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindDataEx(hwnd int, addrRange string, data string, step int, multiThread int, mode int) string {
-	ret, _ := com.dm.CallMethod("FindDataEx", hwnd, addrRange, data, step, multiThread, mode)
+	ret, _ := com.dm.CallMethod(DllM["FindDataEx"], hwnd, addrRange, data, step, multiThread, mode)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindDouble(hwnd int, addrRange string, doubleValueMin float64, doubleValueMax float64) string {
-	ret, _ := com.dm.CallMethod("FindDouble", hwnd, addrRange, doubleValueMin, doubleValueMax)
+	ret, _ := com.dm.CallMethod(DllM["FindDouble"], hwnd, addrRange, doubleValueMin, doubleValueMax)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindDoubleEx(hwnd int, addrRange string, doubleValueMin float64, doubleValueMax float64, step int, multiThread int, mode int) string {
-	ret, _ := com.dm.CallMethod("FindDoubleEx", hwnd, addrRange, doubleValueMin, doubleValueMax, step, multiThread, mode)
+	ret, _ := com.dm.CallMethod(DllM["FindDoubleEx"], hwnd, addrRange, doubleValueMin, doubleValueMax, step, multiThread, mode)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindFloat(hwnd int, addrRange string, floatValueMin float32, floatValueMax float32) string {
-	ret, _ := com.dm.CallMethod("FindFloat", hwnd, addrRange, floatValueMin, floatValueMax)
+	ret, _ := com.dm.CallMethod(DllM["FindFloat"], hwnd, addrRange, floatValueMin, floatValueMax)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindFloatEx(hwnd int, addrRange string, floatValueMin float32, floatValueMax float32, step int, multiThread int, mode int) string {
-	ret, _ := com.dm.CallMethod("FindFloatEx", hwnd, addrRange, floatValueMin, floatValueMax, step, multiThread, mode)
+	ret, _ := com.dm.CallMethod(DllM["FindFloatEx"], hwnd, addrRange, floatValueMin, floatValueMax, step, multiThread, mode)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindInt(hwnd int, addrRange string, intValueMin int64, intValueMax int64, itype int) string {
-	ret, _ := com.dm.CallMethod("FindInt", hwnd, addrRange, intValueMin, intValueMax, itype)
+	ret, _ := com.dm.CallMethod(DllM["FindInt"], hwnd, addrRange, intValueMin, intValueMax, itype)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindIntEx(hwnd int, addr_range string, intValueMin int64, intValueMax int64, itype int, step int, multiThread int, mode int) string {
-	ret, _ := com.dm.CallMethod("FindIntEx", hwnd, addr_range, intValueMin, intValueMax, itype, step, multiThread, mode)
+	ret, _ := com.dm.CallMethod(DllM["FindIntEx"], hwnd, addr_range, intValueMin, intValueMax, itype, step, multiThread, mode)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindString(hwnd int, addrRange string, stringValue string, itype int) string {
-	ret, _ := com.dm.CallMethod("FindString", hwnd, addrRange, stringValue, itype)
+	ret, _ := com.dm.CallMethod(DllM["FindString"], hwnd, addrRange, stringValue, itype)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FindStringEx(hwnd int, addrRange string, stringValue string, itype int, step int, multiThread int, mode int) string {
-	ret, _ := com.dm.CallMethod("FindStringEx", hwnd, addrRange, stringValue, itype, step, multiThread, mode)
+	ret, _ := com.dm.CallMethod(DllM["FindStringEx"], hwnd, addrRange, stringValue, itype, step, multiThread, mode)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) FloatToData(value float32) string {
-	ret, _ := com.dm.CallMethod("FloatToData", value)
+	ret, _ := com.dm.CallMethod(DllM["FloatToData"], value)
 	defer ret.Clear()
 	return ret.ToString()
 }
@@ -87,7 +87,7 @@ func (com *Dmsoft) FloatToData(value float32) string {
 // long FreeProcessMemory(hwnd)
 
 func (com *Dmsoft) FreeProcessMemory(hwnd int) int {
-	ret, _ := com.dm.CallMethod("FreeProcessMemory", hwnd)
+	ret, _ := com.dm.CallMethod(DllM["FreeProcessMemory"], hwnd)
 	defer ret.Clear()
 	return int(ret.Val)
 }
@@ -103,19 +103,19 @@ func (com *Dmsoft) GetCommandLine(hwnd int) string {
 // LONGLONG GetRemoteApiAddress(hwnd,base_addr,fun_name)
 
 func (com *Dmsoft) GetModuleBaseAddr(hwnd int, module string) int64 {
-	ret, _ := com.dm.CallMethod("GetModuleBaseAddr", hwnd, module)
+	ret, _ := com.dm.CallMethod(DllM["GetModuleBaseAddr"], hwnd, module)
 	defer ret.Clear()
 	return ret.Val
 }
 
 func (com *Dmsoft) GetModuleSize(hwnd int, module string) int {
-	ret, _ := com.dm.CallMethod("GetModuleSize", hwnd, module)
+	ret, _ := com.dm.CallMethod(DllM["GetModuleSize"], hwnd, module)
 	defer ret.Clear()
 	return int(ret.Val)
 }
 
 func (com *Dmsoft) GetRemoteApiAddress(hwnd int, base_addr int64, fun_name string) int64 {
-	ret, _ := com.dm.CallMethod("GetRemoteApiAddress", hwnd, base_addr, fun_name)
+	ret, _ := com.dm.CallMethod(DllM["GetRemoteApiAddress"], hwnd, base_addr, fun_name)
 	defer ret.Clear()
 	return ret.Val
 }
@@ -123,13 +123,13 @@ func (com *Dmsoft) GetRemoteApiAddress(hwnd int, base_addr int64, fun_name strin
 // long Int64ToInt32(value)
 // string IntToData(value,type)
 func (com *Dmsoft) Int64ToInt32(value int64) int {
-	ret, _ := com.dm.CallMethod("Int64ToInt32", value)
+	ret, _ := com.dm.CallMethod(DllM["Int64ToInt32"], value)
 	defer ret.Clear()
 	return int(ret.Val)
 }
 
 func (com *Dmsoft) IntToData(value int64, itype int) string {
-	ret, _ := com.dm.CallMethod("IntToData", value, itype)
+	ret, _ := com.dm.CallMethod(DllM["IntToData"], value, itype)
 	defer ret.Clear()
 	return ret.ToString()
 }
@@ -230,13 +230,13 @@ func (com *Dmsoft) SetMemoryHwndAsProcessId(en int) int {
 // long TerminateProcess(pid)
 
 func (com *Dmsoft) StringToData(value string, itype int) string {
-	ret, _ := com.dm.CallMethod("StringToData", value, itype)
+	ret, _ := com.dm.CallMethod(DllM["StringToData"], value, itype)
 	defer ret.Clear()
 	return ret.ToString()
 }
 
 func (com *Dmsoft) TerminateProcess(pid int) int {
-	ret, _ := com.dm.CallMethod("TerminateProcess", pid)
+	ret, _ := com.dm.CallMethod(DllM["TerminateProcess"], pid)
 	defer ret.Clear()
 	return int(ret.Val)
 }
