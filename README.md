@@ -2,7 +2,7 @@
 项目克隆于 github.com/qianniancn/go-dmsoft 修改
 
 ## 安装
-`go get -u github.com/willpw/go-dmsoft-willpw`
+`go get -u github.com/willpw/DmsoftGoWill`
 
 ## 注意事项
 由于大漠插件是win32的Dll，所以在windows64位运行和编译的时候需要设置环境变量。
