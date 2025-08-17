@@ -1,5 +1,6 @@
 {
-	"ActiveInputMethod": "ActiveInputMethod",
+    "DmReg.dll": "DmReg.dll",
+    "ActiveInputMethod": "ActiveInputMethod",
 	"AddDict": "AddDict",
 	"AiEnableFindPicWindow": "AiEnableFindPicWindow",
 	"AiFindPic": "AiFindPic",
