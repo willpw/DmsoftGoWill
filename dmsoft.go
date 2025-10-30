@@ -30,7 +30,10 @@ type Dmsoft struct {
 func NewDmsoft() *Dmsoft {
 	var com Dmsoft
 	var err error
-	_ = ole.CoInitializeEx(0, 0)
+	err = ole.CoInitialize(0)
+	if err != nil {
+		panic(err.Error() + "___NewDmsoft")
+	}
 	com.IUnknown, err = oleutil.CreateObject(DllM["Willpwr"])
 	if err != nil {
 		panic(err)
