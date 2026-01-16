@@ -30,7 +30,7 @@ type Dmsoft struct {
 func NewDmsoft() *Dmsoft {
 	var com Dmsoft
 	var err error
-	err = ole.CoInitialize(0)
+	err = ole.CoInitializeEx(0, ole.COINIT_MULTITHREADED)
 	if err != nil {
 		panic(err.Error() + "___NewDmsoft")
 	}
