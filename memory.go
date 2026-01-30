@@ -270,7 +270,6 @@ func (com *Dmsoft) WriteData(hwnd int, addr, data string) int {
 	ret, _ := com.dm.CallMethod(DllM["WriteData"], hwnd, addr, data)
 	defer ret.Clear()
 	return int(ret.Val)
-
 }
 
 func (com *Dmsoft) WriteDataAddr(hwnd int, addr int64, data string) int {
@@ -283,7 +282,6 @@ func (com *Dmsoft) WriteDataAddrFromBin(hwnd int, addr int64, data, le int) int 
 	ret, _ := com.dm.CallMethod(DllM["WriteDataAddrFromBin"], hwnd, addr, data, le)
 	defer ret.Clear()
 	return int(ret.Val)
-
 }
 
 func (com *Dmsoft) WriteDataFromBin(hwnd int, addr string, data, le int) int {
