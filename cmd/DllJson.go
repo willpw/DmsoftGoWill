@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/willpw/GoDmsoftWillpwr"
+	"github.com/willpw/DmsoftGoWill"
 )
 
 func main() {

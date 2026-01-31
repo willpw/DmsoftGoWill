@@ -1,10 +1,11 @@
 package main
 
 import (
-	dmsoft "github.com/willpw/GoDmsoftWillpwr"
 	"log"
 	"os"
 	"unsafe"
+
+	dmsoft "github.com/willpw/DmsoftGoWill"
 )
 
 // 填写自己的注册码
